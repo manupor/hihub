@@ -1,0 +1,22 @@
+# Large video files
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*

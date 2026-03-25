@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test AOS Animations</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <style>
+        body { padding: 50px; }
+        .test-box { 
+            height: 200px; 
+            background: #ef9521; 
+            margin: 50px 0; 
+            padding: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .spacer { height: 100vh; }
+    </style>
+</head>
+<body>
+    <h1>Test AOS Animations - Scroll Down</h1>
+    <div class="spacer"></div>
+    
+    <div class="test-box" data-aos="fade-up">
+        Box 1 - Fade Up
+    </div>
+    
+    <div class="test-box" data-aos="fade-up" data-aos-delay="100">
+        Box 2 - Fade Up with Delay
+    </div>
+    
+    <div class="test-box" data-aos="fade-up" data-aos-delay="200">
+        Box 3 - Fade Up with More Delay
+    </div>
+    
+    <div class="spacer"></div>
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+        console.log('AOS initialized');
+    </script>
+</body>
+</html>
