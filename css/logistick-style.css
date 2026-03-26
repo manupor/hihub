@@ -353,6 +353,35 @@ section {
     fill: #FFF;
 }
 
+/* Desktop header scroll styles */
+@media (min-width: 769px) {
+    header.clone {
+        background: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    header.clone #mainmenu li a {
+        color: #333 !important;
+    }
+    
+    header.clone .btn-main {
+        color: #333 !important;
+        border-color: #333 !important;
+    }
+    
+    header.clone .language-switcher {
+        color: #333 !important;
+    }
+    
+    header.clone .logo-main {
+        display: none !important;
+    }
+    
+    header.clone .logo-scroll {
+        display: block !important;
+    }
+}
+
 /* Responsive Typography */
 @media (max-width: 768px) {
     /* Header sticky with white background for mobile */
