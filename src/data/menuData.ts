@@ -12,28 +12,28 @@ export interface MenuItem {
 export const menuData: MenuItem[] = [
     {
         label: "Inicio",
-        key: "inicio",
+        key: "home",
         path: "/#inicio",
         matchPaths: ["/", "/index-2"],
     },
     {
         label: "Nosotros",
-        key: "nosotros",
+        key: "about",
         path: "/#nosotros",
     },
     {
         label: "Servicios",
-        key: "servicios",
+        key: "services",
         path: "/#servicios",
     },
     {
         label: "Clientes",
-        key: "clientes",
+        key: "clients",
         path: "/#clientes",
     },
     {
         label: "Contacto",
-        key: "contacto",
+        key: "contact",
         path: "/#contacto",
     },
 ];

@@ -240,7 +240,7 @@ export default function ChatWidget() {
                 className="hihub-agent-avatar"
               />
               <div>
-                <h3>Sofía</h3>
+                <h3 style={{ color: '#ffffff' }}>Sofía</h3>
                 <span className="hihub-status">
                   <span className="hihub-status-dot"></span>
                   {pageLanguage === 'en' ? 'Online' : 'En línea'}
