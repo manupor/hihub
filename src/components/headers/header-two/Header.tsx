@@ -4,8 +4,8 @@ import Menu from "@/components/headers/header-two/Menu";
 import { type LanguageOpt } from "@/components/elements/LanguageSelect";
 
 const language: LanguageOpt[] = [
-    { image: Flag, language: "English" },
-    { image: Flag, language: "Español" },
+    { flag: Flag, language: "English", code: "en" },
+    { flag: Flag, language: "Español", code: "es" },
 ];
 export default function Header() {
     const [isStick, setIsSticky] = useState<boolean>(false);
