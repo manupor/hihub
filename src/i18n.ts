@@ -79,6 +79,11 @@ const resources = {
       "about2.footer1.desc": "Operations across China, LATAM and beyond",
       "about2.footer2.title": "Online Tracing",
       "about2.footer2.desc": "Real-time visibility for every shipment",
+      "about2.stats.clients": "Clients",
+      "about2.stats.satisfaction": "Satisfaction",
+      "about2.stats.years": "Years Exp.",
+      "about2.stats.clientSatisfaction": "Client Satisfaction",
+      "about2.stats.yearsExperience": "Years of Experience",
 
       // Services / Choose Section
       "services2.subtitle": "Our Services",
@@ -285,7 +290,12 @@ const resources = {
       "about2.footer1.title": "Logística Global",
       "about2.footer1.desc": "Operaciones en China, LATAM y más allá",
       "about2.footer2.title": "Rastreo en Línea",
-      "about2.footer2.desc": "Visibilidad en tiempo real para cada envío",
+      "about2.footer2.desc": "Visibilidad en tiempo real de cada envío",
+      "about2.stats.clients": "Clientes",
+      "about2.stats.satisfaction": "Satisfacción",
+      "about2.stats.years": "Años Exp.",
+      "about2.stats.clientSatisfaction": "Satisfacción del Cliente",
+      "about2.stats.yearsExperience": "Años de Experiencia",
 
       // Services / Choose Section
       "services2.subtitle": "Nuestros Servicios",

@@ -67,14 +67,22 @@ export default function AboutSec2() {
          { threshold: 0.3 }
       );
 
-      const element = document.getElementById('stats-badges');
-      if (element) {
-         observer.observe(element);
+      const desktopElement = document.getElementById('stats-badges');
+      const mobileElement = document.getElementById('mobile-stats-badges');
+      
+      if (desktopElement) {
+         observer.observe(desktopElement);
+      }
+      if (mobileElement) {
+         observer.observe(mobileElement);
       }
 
       return () => {
-         if (element) {
-            observer.unobserve(element);
+         if (desktopElement) {
+            observer.unobserve(desktopElement);
+         }
+         if (mobileElement) {
+            observer.unobserve(mobileElement);
          }
       };
    }, [hasAnimated]);
@@ -104,7 +112,7 @@ export default function AboutSec2() {
                                  }}
                               >
                                  <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{clientsCount}+</div>
-                                 <div style={{ fontSize: '0.75rem' }}>Clients</div>
+                                 <div style={{ fontSize: '0.75rem' }}>{t('about2.stats.clients')}</div>
                               </div>
                               <div 
                                  className="px-3 py-2 rounded-3 text-center"
@@ -117,7 +125,7 @@ export default function AboutSec2() {
                                  }}
                               >
                                  <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{satisfactionCount}%</div>
-                                 <div style={{ fontSize: '0.75rem' }}>Client Satisfaction</div>
+                                 <div style={{ fontSize: '0.75rem' }}>{t('about2.stats.clientSatisfaction')}</div>
                               </div>
                               <div 
                                  className="px-3 py-2 rounded-3 text-center"
@@ -130,12 +138,12 @@ export default function AboutSec2() {
                                  }}
                               >
                                  <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{yearsCount}+</div>
-                                 <div style={{ fontSize: '0.75rem' }}>Years of Experience</div>
+                                 <div style={{ fontSize: '0.75rem' }}>{t('about2.stats.yearsExperience')}</div>
                               </div>
                            </div>
                         </div>
                         {/* Mobile stats - below image in 3 columns */}
-                        <div className="d-flex d-md-none gap-2 justify-content-center mt-3">
+                        <div id="mobile-stats-badges" className="d-flex d-md-none gap-2 justify-content-center mt-3">
                            <div 
                               className="px-2 py-2 rounded-3 text-center flex-fill"
                               style={{
@@ -147,7 +155,7 @@ export default function AboutSec2() {
                               }}
                            >
                               <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{clientsCount}+</div>
-                              <div style={{ fontSize: '0.65rem' }}>Clients</div>
+                              <div style={{ fontSize: '0.65rem' }}>{t('about2.stats.clients')}</div>
                            </div>
                            <div 
                               className="px-2 py-2 rounded-3 text-center flex-fill"
@@ -160,7 +168,7 @@ export default function AboutSec2() {
                               }}
                            >
                               <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{satisfactionCount}%</div>
-                              <div style={{ fontSize: '0.65rem' }}>Satisfaction</div>
+                              <div style={{ fontSize: '0.65rem' }}>{t('about2.stats.satisfaction')}</div>
                            </div>
                            <div 
                               className="px-2 py-2 rounded-3 text-center flex-fill"
@@ -173,7 +181,7 @@ export default function AboutSec2() {
                               }}
                            >
                               <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{yearsCount}+</div>
-                              <div style={{ fontSize: '0.65rem' }}>Years Exp.</div>
+                              <div style={{ fontSize: '0.65rem' }}>{t('about2.stats.years')}</div>
                            </div>
                         </div>
                      </FadeInAdvanced>
