@@ -2,8 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Quote } from 'lucide-react';
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
+import { useTranslation } from 'react-i18next';
 
 export default function TestimonialsSec() {
+    const { t } = useTranslation();
     const testimonials = [
         {
             quote: "HiHub developed a custom premium product line for us, combining innovative design and efficient supply chain. An exceptional partner for Urbaneer!",
@@ -49,10 +51,10 @@ export default function TestimonialsSec() {
                 <div className="container ct-container">
                     <div className="sec-intro mx-auto text-center mb-5">
                         <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
-                            Testimonials
+                            {t('testimonials.subtitle', 'Testimonios')}
                         </span>
                         <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto' }}>
-                            What Our Clients Say
+                            {t('testimonials.title', 'Lo Que Dicen Nuestros Clientes')}
                         </h2>
                     </div>
 
@@ -126,7 +128,7 @@ export default function TestimonialsSec() {
                                                     <h4 className="h6 mb-1 fw-bold" style={{ color: '#FFC107' }}>
                                                         {testimonial.name} – {testimonial.location}
                                                     </h4>
-                                                    <p className="mb-0" style={{ color: '#00d4ff', fontSize: '0.85rem' }}>
+                                                    <p className="mb-0" style={{ color: '#ffffff', fontSize: '0.85rem' }}>
                                                         {testimonial.title}
                                                     </p>
                                                 </div>

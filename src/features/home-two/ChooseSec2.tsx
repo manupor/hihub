@@ -95,7 +95,21 @@ export default function ChooseSec2() {
                                                 backgroundColor: '#020e28',
                                                 border: '1px solid rgba(255, 193, 7, 0.5)',
                                                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
-                                                minHeight: '280px'
+                                                minHeight: '280px',
+                                                transition: 'all 0.3s ease',
+                                                cursor: 'pointer',
+                                                position: 'relative',
+                                                overflow: 'hidden'
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.currentTarget.style.transform = 'translateY(-5px)';
+                                                e.currentTarget.style.boxShadow = '0 8px 20px rgba(255, 193, 7, 0.3)';
+                                                e.currentTarget.style.borderLeft = '4px solid #FFC107';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.currentTarget.style.transform = 'translateY(0)';
+                                                e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+                                                e.currentTarget.style.borderLeft = '1px solid rgba(255, 193, 7, 0.5)';
                                             }}
                                         >
                                             <div className="d-flex align-items-center mb-3">

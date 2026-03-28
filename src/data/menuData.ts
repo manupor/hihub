@@ -32,8 +32,8 @@ export const menuData: MenuItem[] = [
         path: "/#clientes",
     },
     {
-        label: "FAQ",
-        key: "faq",
-        path: "/#faq",
+        label: "Contacto",
+        key: "contacto",
+        path: "/#contacto",
     },
-    ];
+];

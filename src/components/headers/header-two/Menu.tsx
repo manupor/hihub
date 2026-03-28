@@ -15,7 +15,7 @@ export default function Menu({ currentLanguage, setCurrentLanguage }: MenuProps)
     const { t } = useTranslation();
     const context = useContext(ProjectContext);
     if (!context) throw new Error("Context Null");
-    const { setIsSearch, isMobile, setIsMobile } = context;
+    const { isMobile, setIsMobile } = context;
     return (
         <>
             <div className="container ct-container">
@@ -44,15 +44,6 @@ export default function Menu({ currentLanguage, setCurrentLanguage }: MenuProps)
                 <div className="nav-cta d-none d-md-flex  order-lg-3">
                     <div className="d-flex align-items-center justify-content-between gap-3">
                         <LanguageSelect languageItem={currentLanguage} onChange={setCurrentLanguage} />
-                        <Link
-                            to="#"
-                            onClick={() => setIsSearch(pre => !pre)}
-                            className="icon-lg bg-light rounded-circle"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvas-search"
-                        >
-                            <i className="fa fa-search"></i>
-                        </Link>
                         <button 
                             onClick={() => window.dispatchEvent(new CustomEvent('openChatWidget'))}
                             className="btn btn-primary btn-hover"
@@ -86,18 +77,6 @@ export default function Menu({ currentLanguage, setCurrentLanguage }: MenuProps)
                                 <div className="mobile-language-selector">
                                     <LanguageSelect languageItem={currentLanguage} onChange={setCurrentLanguage} />
                                 </div>
-                                
-                                {/* Search Action */}
-                                <button
-                                    onClick={() => {
-                                        setIsSearch(pre => !pre);
-                                        setIsMobile(false);
-                                    }}
-                                    className="btn btn-outline-light w-100 d-flex align-items-center justify-content-center gap-2 py-3"
-                                >
-                                    <i className="fa fa-search"></i>
-                                    <span>Buscar</span>
-                                </button>
                                 
                                 {/* Primary CTA */}
                                 <button 

@@ -2793,7 +2793,8 @@ ul.ct-list li:before {
 	margin-left: 5px;
 	float: right;
 	font-size: 13px;
-	margin-top: 2px
+	margin-top: 2px;
+	color: #fff
 }
 
 @media (max-width:767.98px) {
@@ -7562,7 +7563,7 @@ section.promo-sec .breadcrumb-item+.breadcrumb-item:before {
 .operation-sec .tab-content .operation-content .opt-card {
 	position: absolute;
 	width: 330px;
-	height: 265px;
+	height: 97px;
 	bottom: -60px;
 	left: 40px;
 	padding: 30px

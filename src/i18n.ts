@@ -161,6 +161,34 @@ const resources = {
       "sidebar.roadFreight": "Road Freight",
       "sidebar.customsBrokerage": "Customs Brokerage",
       "sidebar.getQuote": "Get a Quote",
+
+      // Testimonials Section
+      "testimonials.subtitle": "Testimonials",
+      "testimonials.title": "What Our Clients Say",
+      "testimonials.quote1": "HiHub developed a custom premium product line for us, combining innovative design and efficient supply chain. An exceptional partner for Urbaneer!",
+      "testimonials.quote2": "HiHub became Dogpaper's true partner – from sourcing eco-materials to customized packaging, they mastered every detail while meeting European standards.",
+      "testimonials.quote3": "HiHub delivers customized solutions for Solarmex – from government lighting projects to industrial machinery. A trusted partner with Asian expertise.",
+      "testimonials.quote4": "HiHub exceeded expectations on our complex turbine/compressor project. Their technical mastery was key to industrial success.",
+      "testimonials.quote5": "HiHub and Eng. Manrique Rodriguez were crucial for our Costa Rican geothermal projects - technical excellence and true partnership.",
+      "testimonials.quote6": "HiHub made my artificial plant dream a reality - turning startup fears into a thriving business.",
+
+      // Servicios Section
+      "servicios.subtitle": "WHAT WE OFFER",
+      "servicios.title": "Transport Services That Set Us Apart",
+      "servicios.maritime": "Maritime Freight",
+      "servicios.air": "Air Shipping",
+      "servicios.ground": "Ground Transport",
+      "servicios.consulting": "Air Consulting",
+      "servicios.packaging": "Packaging & Handling",
+      "servicios.planning": "Space Planning",
+
+      // Footer
+      "footer.quickLinks": "Quick Links",
+      "footer.home": "Home",
+      "footer.about": "About",
+      "footer.services": "Services",
+      "footer.clients": "Clients",
+      "footer.contact": "Contact",
     }
   },
   es: {
@@ -323,6 +351,34 @@ const resources = {
       "sidebar.roadFreight": "Flete Terrestre",
       "sidebar.customsBrokerage": "Correduría Aduanera",
       "sidebar.getQuote": "Solicitar Cotización",
+
+      // Testimonials Section
+      "testimonials.subtitle": "Testimonios",
+      "testimonials.title": "Lo Que Dicen Nuestros Clientes",
+      "testimonials.quote1": "HiHub desarrolló una línea de productos premium personalizada para nosotros, combinando diseño innovador y cadena de suministro eficiente. ¡Un socio excepcional para Urbaneer!",
+      "testimonials.quote2": "HiHub se convirtió en el verdadero socio de Dogpaper: desde el abastecimiento de materiales ecológicos hasta el empaque personalizado, dominaron cada detalle cumpliendo con los estándares europeos.",
+      "testimonials.quote3": "HiHub entrega soluciones personalizadas para Solarmex: desde proyectos de iluminación gubernamental hasta maquinaria industrial. Un socio confiable con experiencia asiática.",
+      "testimonials.quote4": "HiHub superó las expectativas en nuestro complejo proyecto de turbinas/compresores. Su dominio técnico fue clave para el éxito industrial.",
+      "testimonials.quote5": "HiHub y el Ing. Manrique Rodríguez fueron cruciales para nuestros proyectos geotérmicos en Costa Rica: excelencia técnica y verdadera asociación.",
+      "testimonials.quote6": "HiHub hizo realidad mi sueño de plantas artificiales: convirtiendo los temores de una startup en un negocio próspero.",
+
+      // Servicios Section
+      "servicios.subtitle": "LO QUE OFRECEMOS",
+      "servicios.title": "Servicios de Transporte que Nos Distinguen",
+      "servicios.maritime": "Flete Marítimo",
+      "servicios.air": "Envío Aéreo",
+      "servicios.ground": "Transporte Terrestre",
+      "servicios.consulting": "Consultoría Aérea",
+      "servicios.packaging": "Embalaje y Manejo",
+      "servicios.planning": "Planificación de Espacio",
+
+      // Footer
+      "footer.quickLinks": "Enlaces Rápidos",
+      "footer.home": "Inicio",
+      "footer.about": "Nosotros",
+      "footer.services": "Servicios",
+      "footer.clients": "Clientes",
+      "footer.contact": "Contacto",
     }
   }
 };

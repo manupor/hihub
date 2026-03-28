@@ -43,7 +43,7 @@ export default function Footer() {
                                         <Link to="/#clientes">{t('footer.clients', 'Clientes')}</Link>
                                     </li>
                                     <li>
-                                        <Link to="/#faq">{t('footer.faq', 'FAQ')}</Link>
+                                        <Link to="/#contacto">{t('footer.contact', 'Contacto')}</Link>
                                     </li>
                                 </ul>
                             </div>

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 import AboutM from '@/images/consultants-img-06.jpg';
 import Af1 from '@/images/af-1.png';
 import Af2 from '@/images/af-2.png';
@@ -7,6 +8,76 @@ import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
 export default function AboutSec2() {
    const { t } = useTranslation();
+   const [clientsCount, setClientsCount] = useState(0);
+   const [satisfactionCount, setSatisfactionCount] = useState(0);
+   const [yearsCount, setYearsCount] = useState(0);
+   const [hasAnimated, setHasAnimated] = useState(false);
+
+   useEffect(() => {
+      const observer = new IntersectionObserver(
+         (entries) => {
+            entries.forEach((entry) => {
+               if (entry.isIntersecting && !hasAnimated) {
+                  setHasAnimated(true);
+                  
+                  // Animate clients count to 1000+
+                  let currentClients = 0;
+                  const targetClients = 1000;
+                  const incrementClients = targetClients / 50;
+                  const timerClients = setInterval(() => {
+                     currentClients += incrementClients;
+                     if (currentClients >= targetClients) {
+                        setClientsCount(targetClients);
+                        clearInterval(timerClients);
+                     } else {
+                        setClientsCount(Math.floor(currentClients));
+                     }
+                  }, 30);
+
+                  // Animate satisfaction to 98%
+                  let currentSatisfaction = 0;
+                  const targetSatisfaction = 98;
+                  const incrementSatisfaction = targetSatisfaction / 50;
+                  const timerSatisfaction = setInterval(() => {
+                     currentSatisfaction += incrementSatisfaction;
+                     if (currentSatisfaction >= targetSatisfaction) {
+                        setSatisfactionCount(targetSatisfaction);
+                        clearInterval(timerSatisfaction);
+                     } else {
+                        setSatisfactionCount(Math.floor(currentSatisfaction));
+                     }
+                  }, 30);
+
+                  // Animate years to 10+
+                  let currentYears = 0;
+                  const targetYears = 10;
+                  const incrementYears = targetYears / 50;
+                  const timerYears = setInterval(() => {
+                     currentYears += incrementYears;
+                     if (currentYears >= targetYears) {
+                        setYearsCount(targetYears);
+                        clearInterval(timerYears);
+                     } else {
+                        setYearsCount(Math.floor(currentYears));
+                     }
+                  }, 30);
+               }
+            });
+         },
+         { threshold: 0.3 }
+      );
+
+      const element = document.getElementById('stats-badges');
+      if (element) {
+         observer.observe(element);
+      }
+
+      return () => {
+         if (element) {
+            observer.unobserve(element);
+         }
+      };
+   }, [hasAnimated]);
    return (
       <>
          {/* About Section Start */}
@@ -16,8 +87,52 @@ export default function AboutSec2() {
                   {/* Left column - LogiXpress style: large image + years badge bottom-right */}
                   <div className="col-lg-6">
                      <FadeInAdvanced variant='fadeInLeft'>
-                        <div style={{ marginTop: '-260px' }}>
+                        <div style={{ marginTop: '-20px', position: 'relative' }}>
                            <img src={AboutM} className="img-fluid w-100" alt="HiHub Global Operations" style={{ borderRadius: '8px', objectFit: 'cover', maxHeight: '500px' }} />
+                           <div 
+                              id="stats-badges"
+                              className="position-absolute bottom-0 start-0 end-0 m-3 d-flex flex-wrap gap-2 justify-content-center"
+                           >
+                              <div 
+                                 className="px-3 py-2 rounded-3 text-center"
+                                 style={{
+                                    backgroundColor: '#FFC107',
+                                    color: '#000',
+                                    fontWeight: 'bold',
+                                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                    minWidth: '120px'
+                                 }}
+                              >
+                                 <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{clientsCount}+</div>
+                                 <div style={{ fontSize: '0.75rem' }}>Clients</div>
+                              </div>
+                              <div 
+                                 className="px-3 py-2 rounded-3 text-center"
+                                 style={{
+                                    backgroundColor: '#FFC107',
+                                    color: '#000',
+                                    fontWeight: 'bold',
+                                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                    minWidth: '120px'
+                                 }}
+                              >
+                                 <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{satisfactionCount}%</div>
+                                 <div style={{ fontSize: '0.75rem' }}>Client Satisfaction</div>
+                              </div>
+                              <div 
+                                 className="px-3 py-2 rounded-3 text-center"
+                                 style={{
+                                    backgroundColor: '#FFC107',
+                                    color: '#000',
+                                    fontWeight: 'bold',
+                                    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                    minWidth: '120px'
+                                 }}
+                              >
+                                 <div style={{ fontSize: '1.5rem', lineHeight: '1.2' }}>{yearsCount}+</div>
+                                 <div style={{ fontSize: '0.75rem' }}>Years of Experience</div>
+                              </div>
+                           </div>
                         </div>
                      </FadeInAdvanced>
                   </div>
@@ -38,14 +153,14 @@ export default function AboutSec2() {
                            <li>{t('about2.check3')}</li>
                            <li>{t('about2.check4')}</li>
                         </ul>
-                        <div className="d-sm-flex align-items-center about-cta gap-5">
-                           <div className="badge bg-primary text-white px-4 py-3 rounded-pill d-inline-flex align-items-center gap-2">
-                              <span>{t('about2.btn')}</span>
-                              <i className="fa fa-arrow-right"></i>
-                           </div>
-                        </div>
                      </div>
-                     <div className="about-footer d-sm-flex align-items-center gap-5 bg-shade round mt-5">
+                  </div>
+               </div>
+               
+               {/* Centered Footer Card */}
+               <div className="row mt-5">
+                  <div className="col-12">
+                     <div className="about-footer d-sm-flex align-items-center justify-content-center gap-5 bg-shade round mx-auto" style={{ maxWidth: '800px' }}>
                         <div className="af-item d-flex align-items-start gap-4">
                            <img src={Af1} alt="transform" style={{ filter: 'brightness(0)' }} />
                            <div className="af-info">
