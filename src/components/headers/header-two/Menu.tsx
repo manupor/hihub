@@ -132,7 +132,7 @@ export default function Menu({ currentLanguage, setCurrentLanguage }: MenuProps)
                                                 d="M0 .75Q.063.063.75 0h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 1.437 0 .75m0 5Q.063 5.063.75 5h12.5q.687.063.75.75-.063.687-.75.75H.75Q.063 6.437 0 5.75m13.25 5.75H.75q-.687-.063-.75-.75.063-.687.75-.75h12.5q.687.063.75.75-.063.687-.75.75"
                                             />
                                         </svg>
-                                        <span>Menú</span>
+                                        <span>Sidebar</span>
                                     </button>
                                 </div>
                                 
