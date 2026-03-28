@@ -137,15 +137,6 @@ export default function TestimonialsSec() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center mb-10"
         >
-          <div className="flex justify-center">
-            <div 
-              className="border py-1 px-4 rounded-lg text-sm font-medium"
-              style={{ borderColor: 'rgba(255, 193, 7, 0.5)', color: '#FFC107' }}
-            >
-              {t('testimonials.subtitle', 'Testimonios')}
-            </div>
-          </div>
-
           <h2 
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mt-5"
             style={{ color: '#FFC107' }}

@@ -27,7 +27,7 @@ const TextAnimation: React.FC<TextAnimationProps> = ({
                     <motion.span
                         key={`${parentKey}-seg${segIndex}-char-${index}-${char}`}
                         variants={getCharVariants()}
-                        style={{ display: "inline" }}
+                        style={{ display: "inline-block", whiteSpace: "pre" }}
                     >
                         {char === " " ? "\u00A0" : char}
                     </motion.span>
