@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './ChatWidget.css';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || 'https://hihub-agent.onrender.com';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -146,9 +146,13 @@ export default function ChatWidget() {
 
     } catch (error) {
       console.error('Chat error:', error);
+      const errorMessage = pageLanguage === 'en' 
+        ? 'Sorry, there was an error connecting to our service. Please try again or contact us directly at info@hihubglobal.com'
+        : 'Lo siento, hubo un error al conectar con nuestro servicio. Por favor intenta de nuevo o contáctanos directamente en info@hihubglobal.com';
+      
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: 'Lo siento, hubo un error. Por favor intenta de nuevo.'
+        content: errorMessage
       }]);
     }
 
