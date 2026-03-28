@@ -91,7 +91,7 @@ export default function AboutSec2() {
                            <img src={AboutM} className="img-fluid w-100" alt="HiHub Global Operations" style={{ borderRadius: '8px', objectFit: 'cover', maxHeight: '500px' }} />
                            <div 
                               id="stats-badges"
-                              className="position-absolute bottom-0 start-0 end-0 m-3 d-flex flex-wrap gap-2 justify-content-center"
+                              className="position-absolute bottom-0 start-0 end-0 m-3 d-none d-md-flex flex-wrap gap-2 justify-content-center"
                            >
                               <div 
                                  className="px-3 py-2 rounded-3 text-center"
@@ -134,20 +134,62 @@ export default function AboutSec2() {
                               </div>
                            </div>
                         </div>
+                        {/* Mobile stats - below image in 3 columns */}
+                        <div className="d-flex d-md-none gap-2 justify-content-center mt-3">
+                           <div 
+                              className="px-2 py-2 rounded-3 text-center flex-fill"
+                              style={{
+                                 backgroundColor: '#FFC107',
+                                 color: '#000',
+                                 fontWeight: 'bold',
+                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                 minWidth: '80px'
+                              }}
+                           >
+                              <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{clientsCount}+</div>
+                              <div style={{ fontSize: '0.65rem' }}>Clients</div>
+                           </div>
+                           <div 
+                              className="px-2 py-2 rounded-3 text-center flex-fill"
+                              style={{
+                                 backgroundColor: '#FFC107',
+                                 color: '#000',
+                                 fontWeight: 'bold',
+                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                 minWidth: '80px'
+                              }}
+                           >
+                              <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{satisfactionCount}%</div>
+                              <div style={{ fontSize: '0.65rem' }}>Satisfaction</div>
+                           </div>
+                           <div 
+                              className="px-2 py-2 rounded-3 text-center flex-fill"
+                              style={{
+                                 backgroundColor: '#FFC107',
+                                 color: '#000',
+                                 fontWeight: 'bold',
+                                 boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
+                                 minWidth: '80px'
+                              }}
+                           >
+                              <div style={{ fontSize: '1.2rem', lineHeight: '1.2' }}>{yearsCount}+</div>
+                              <div style={{ fontSize: '0.65rem' }}>Years Exp.</div>
+                           </div>
+                        </div>
                      </FadeInAdvanced>
                   </div>
                   <div className="col-xl-6 ps-xl-4">
-                     <div className="about-content">
-                        <span className="sub-title2 fadeInUp single" style={{ color: '#ffffff' }}>
+                     <div className="about-content text-center text-md-start">
+                        <span className="sub-title2 fadeInUp single d-block text-center text-md-start" style={{ color: '#ffffff' }}>
                            {t('about2.subtitle')}
                         </span>
-                        <h2 className="sec-title" style={{ color: '#ffffff' }}>
+                        <h2 className="sec-title text-center text-md-start" style={{ color: '#ffffff', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)' }}>
                            <TextAnimation animationStyle="style3">
                               {t('about2.title')}
                            </TextAnimation>
                         </h2>
-                        <p className="lead" style={{ color: '#ffffff' }}>{t('about2.description')}</p>
-                        <ul className="check" style={{ color: '#ffffff' }}>
+                        <p className="lead text-center text-md-start" style={{ color: '#ffffff' }}>{t('about2.description')}</p>
+                        <ul className="check d-flex flex-column align-items-center align-items-md-start" style={{ color: '#ffffff' }}>
                            <li>{t('about2.check1')}</li>
                            <li>{t('about2.check2')}</li>
                            <li>{t('about2.check3')}</li>
@@ -157,22 +199,22 @@ export default function AboutSec2() {
                   </div>
                </div>
                
-               {/* Centered Footer Card */}
+               {/* Centered Footer Card - Mobile optimized */}
                <div className="row mt-5">
                   <div className="col-12">
-                     <div className="about-footer d-sm-flex align-items-center justify-content-center gap-5 bg-shade round mx-auto" style={{ maxWidth: '800px' }}>
-                        <div className="af-item d-flex align-items-start gap-4">
-                           <img src={Af1} alt="transform" style={{ filter: 'brightness(0)' }} />
-                           <div className="af-info">
-                              <h3 className="h5" style={{ color: '#000000' }}>{t('about2.footer1.title')}</h3>
-                              <p style={{ color: '#000000' }}>{t('about2.footer1.desc')}</p>
+                     <div className="about-footer d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3 gap-sm-5 bg-shade round mx-auto px-3 py-3" style={{ maxWidth: '800px' }}>
+                        <div className="af-item d-flex align-items-center gap-3" style={{ maxWidth: '100%' }}>
+                           <img src={Af1} alt="transform" style={{ filter: 'brightness(0)', width: '40px', height: '40px', flexShrink: 0 }} />
+                           <div className="af-info" style={{ minWidth: 0 }}>
+                              <h3 className="h6 mb-1" style={{ color: '#000000', fontSize: '0.95rem' }}>{t('about2.footer1.title')}</h3>
+                              <p className="mb-0" style={{ color: '#000000', fontSize: '0.8rem', lineHeight: '1.3' }}>{t('about2.footer1.desc')}</p>
                            </div>
                         </div>
-                        <div className="af-item d-flex align-items-start gap-4">
-                           <img src={Af2} alt="transform" style={{ filter: 'brightness(0)' }} />
-                           <div className="af-info">
-                              <h3 className="h5" style={{ color: '#000000' }}>{t('about2.footer2.title')}</h3>
-                              <p style={{ color: '#000000' }}>{t('about2.footer2.desc')}</p>
+                        <div className="af-item d-flex align-items-center gap-3" style={{ maxWidth: '100%' }}>
+                           <img src={Af2} alt="transform" style={{ filter: 'brightness(0)', width: '40px', height: '40px', flexShrink: 0 }} />
+                           <div className="af-info" style={{ minWidth: 0 }}>
+                              <h3 className="h6 mb-1" style={{ color: '#000000', fontSize: '0.95rem' }}>{t('about2.footer2.title')}</h3>
+                              <p className="mb-0" style={{ color: '#000000', fontSize: '0.8rem', lineHeight: '1.3' }}>{t('about2.footer2.desc')}</p>
                            </div>
                         </div>
                      </div>

@@ -74,7 +74,7 @@ export default function ChooseSec2() {
                         <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
                             {t('services2.subtitle', 'Our Services')}
                         </span>
-                        <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3' }}>
+                        <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3', fontSize: 'clamp(1.4rem, 4vw, 2.5rem)' }}>
                             <TextAnimation animationStyle="style1">
                                 {t('choose2.mainTitle')}
                             </TextAnimation>
@@ -91,12 +91,12 @@ export default function ChooseSec2() {
                                 <div className="col-lg-4 col-md-6" key={index}>
                                     <FadeInAdvanced variant="fadeInUp" delay={index * 100}>
                                         <div 
-                                            className="service-detail-card p-4 rounded-4 h-100 d-flex flex-column"
+                                            className="service-detail-card p-3 p-md-4 rounded-4 h-100 d-flex flex-column"
                                             style={{ 
                                                 backgroundColor: '#020e28',
                                                 border: '1px solid rgba(255, 193, 7, 0.5)',
                                                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
-                                                minHeight: '280px',
+                                                minHeight: 'auto',
                                                 transition: 'all 0.3s ease',
                                                 cursor: 'pointer',
                                                 position: 'relative',
@@ -124,7 +124,7 @@ export default function ChooseSec2() {
                                                 >
                                                     <IconComponent size={20} color="#FFC107" strokeWidth={2} />
                                                 </div>
-                                                <h3 className="h6 mb-0 fw-bold" style={{ color: '#FFC107' }}>
+                                                <h3 className="h6 mb-0 fw-bold" style={{ color: '#FFC107', fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
                                                     {service.title}
                                                 </h3>
                                             </div>
@@ -133,7 +133,7 @@ export default function ChooseSec2() {
                                                     <li 
                                                         key={idx} 
                                                         className="mb-2 d-flex"
-                                                        style={{ color: '#ffffff', fontSize: '0.9rem', lineHeight: '1.5' }}
+                                                        style={{ color: '#ffffff', fontSize: 'clamp(0.8rem, 2vw, 0.9rem)', lineHeight: '1.5' }}
                                                     >
                                                         <span className="me-2 flex-shrink-0" style={{ color: '#FFC107' }}>•</span>
                                                         <span>{item}</span>

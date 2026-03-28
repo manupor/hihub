@@ -1,5 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import TabIcon from "@/images/tab-icon.png";
 import TabMain1 from "@/images/air.jpg";
 import TabMain2 from "@/images/Warehousing.jpg";
@@ -13,13 +18,38 @@ export default function OperationSec() {
         setActiveTab(tab);
     };
 
+    const slides = [
+        {
+            id: 'air',
+            title: t('ops.tab1.title'),
+            desc: t('ops.tab1.desc'),
+            image: TabMain1,
+            alt: 'Air freight cargo plane'
+        },
+        {
+            id: 'byroad',
+            title: t('ops.tab2.title'),
+            desc: t('ops.tab2.desc'),
+            image: TabMain2,
+            alt: 'Warehouse inventory storage'
+        },
+        {
+            id: 'road',
+            title: t('ops.tab3.title'),
+            desc: t('ops.tab3.desc'),
+            image: TabMain3,
+            alt: 'Road logistics delivery truck'
+        }
+    ];
+
     return (
         <>
             {/* Operation Section Start */}
             <section id="servicios" className="operation-sec position-relative sec-padding" style={{ backgroundColor: '#020e28' }}>
 
                 <div className="container ct-container">
-                    <div className="row">
+                    {/* Desktop Version */}
+                    <div className="row d-none d-lg-flex">
                         <div className="col-lg-7 pe-lg-5">
                             <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
                                 <TextAnimation animationStyle="style1">
@@ -194,6 +224,63 @@ export default function OperationSec() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Mobile Carousel Version */}
+                    <div className="d-lg-none">
+                        <div className="text-center mb-4">
+                            <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
+                                <TextAnimation animationStyle="style1">
+                                    {t('ops.subtitle')}
+                                </TextAnimation>
+                            </span>
+                            <h2 className="sec-title" style={{ color: '#FFC107', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)' }}>
+                                {t('ops.title')}
+                            </h2>
+                        </div>
+
+                        <Swiper
+                            modules={[Navigation, Pagination]}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            style={{ paddingBottom: '40px' }}
+                        >
+                            {slides.map((slide) => (
+                                <SwiperSlide key={slide.id}>
+                                    <div className="operation-content px-2">
+                                        <div className="mb-3 p-3 rounded-3" style={{ backgroundColor: 'rgba(255, 193, 7, 0.1)', border: '1px solid #FFC107' }}>
+                                            <h3 className="h5 mb-2" style={{ color: '#FFC107' }}>
+                                                {slide.title}
+                                            </h3>
+                                            <p className="mb-0" style={{ color: '#ffffff', fontSize: '0.9rem' }}>
+                                                {slide.desc}
+                                            </p>
+                                        </div>
+                                        <div className="operation-thumb mb-3">
+                                            <img
+                                                src={slide.image}
+                                                className="img-fluid rounded-3"
+                                                alt={slide.alt}
+                                                style={{ width: '100%', height: 'auto' }}
+                                            />
+                                        </div>
+                                        <div className="opt-card rounded-3 p-3" style={{ backgroundColor: '#020e28', border: '1px solid rgba(255, 193, 7, 0.3)' }}>
+                                            <span>
+                                                <img src={TabIcon} alt="Icon" style={{ width: '30px', height: '30px' }} />
+                                            </span>
+                                            <h4 className="mt-2 h6" style={{ color: '#FFC107' }}>
+                                                {t('ops.card.title')}
+                                            </h4>
+                                            <p className="mb-0" style={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                                                {t('ops.card.desc')}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </section>
