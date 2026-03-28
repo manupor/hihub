@@ -11,6 +11,7 @@ const resources = {
       "nav.clients": "Clients",
       "nav.contact": "Contact",
       "nav.contactUs": "Contact Us",
+      "nav.about": "About Us",
       
       // Hero Section
       "hero.title": "Your Trusted Partner for Complex Projects in China",
