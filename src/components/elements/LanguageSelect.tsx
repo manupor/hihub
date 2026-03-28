@@ -72,7 +72,7 @@ const LanguageSelect: React.FC<CustomSelectProps> = ({
     };
 
     return (
-        <div className="dropdown lang-select d-none d-sm-block" ref={selectRef}>
+        <div className="dropdown lang-select" ref={selectRef}>
             <Link className={`dropdown-toggle d-flex gap-1 align-items-center ${isOpen ? "show" : ""}`}
                 to="#"
                 onClick={() => setIsOpen(!isOpen)}
