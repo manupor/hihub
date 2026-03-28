@@ -38,7 +38,7 @@ export default function ServiciosSec() {
                             {t('servicios.subtitle', 'Lo Que Ofrecemos')}
                         </span>
                     </FadeInAdvanced>
-                    <h2 className="sec-title" style={{ color: '#FFC107', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)' }}>
+                    <h2 className="sec-title" style={{ color: '#FFC107', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)', wordWrap: 'break-word', hyphens: 'manual' }}>
                         <TextAnimation animationStyle="style1">
                             {t('servicios.title', 'Servicios de Transporte que Nos Distinguen')}
                         </TextAnimation>

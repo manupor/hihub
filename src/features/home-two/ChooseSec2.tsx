@@ -74,7 +74,7 @@ export default function ChooseSec2() {
                         <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
                             {t('services2.subtitle', 'Our Services')}
                         </span>
-                        <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3', fontSize: 'clamp(1.4rem, 4vw, 2.5rem)' }}>
+                        <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3', fontSize: 'clamp(1.4rem, 4vw, 2.5rem)', wordWrap: 'break-word', hyphens: 'manual' }}>
                             <TextAnimation animationStyle="style1">
                                 {t('choose2.mainTitle')}
                             </TextAnimation>

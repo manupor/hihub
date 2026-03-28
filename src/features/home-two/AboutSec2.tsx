@@ -191,7 +191,7 @@ export default function AboutSec2() {
                         <span className="sub-title2 fadeInUp single d-block text-center text-md-start" style={{ color: '#ffffff' }}>
                            {t('about2.subtitle')}
                         </span>
-                        <h2 className="sec-title text-center text-md-start" style={{ color: '#ffffff', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)' }}>
+                        <h2 className="sec-title text-center text-md-start" style={{ color: '#ffffff', fontSize: 'clamp(1.3rem, 4vw, 2.5rem)', wordWrap: 'break-word', hyphens: 'manual' }}>
                            <TextAnimation animationStyle="style3">
                               {t('about2.title')}
                            </TextAnimation>
