@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import TabIcon from "@/images/tab-icon.png";
 import TabMain1 from "@/images/air.jpg";
 import TabMain2 from "@/images/Warehousing.jpg";
