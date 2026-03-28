@@ -34,9 +34,7 @@ export default function OperationSec() {
                                 </TextAnimation>
                             </span>
                             <h2 className="sec-title" style={{ color: '#FFC107' }}>
-                                <TextAnimation animationStyle="style1">
-                                    {t('ops.title')}
-                                </TextAnimation>
+                                {t('ops.title')}
                             </h2>
 
                             <div
