@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import TabIcon from "@/images/tab-icon.png";
 import TabMain1 from "@/images/air.jpg";
@@ -240,17 +239,16 @@ export default function OperationSec() {
                         </div>
 
                         <Swiper
-                            modules={[Navigation, Pagination]}
+                            modules={[Pagination]}
                             spaceBetween={20}
                             slidesPerView={1}
-                            navigation
                             pagination={{ clickable: true }}
                             style={{ paddingBottom: '40px' }}
                         >
                             {slides.map((slide) => (
                                 <SwiperSlide key={slide.id}>
                                     <div className="operation-content px-2">
-                                        <div className="mb-3 p-3 rounded-3" style={{ backgroundColor: 'rgba(255, 193, 7, 0.1)', border: '1px solid #FFC107' }}>
+                                        <div className="mb-3 p-3 rounded-3" style={{ backgroundColor: '#020e28', border: '2px solid #FFC107' }}>
                                             <h3 className="h5 mb-2" style={{ color: '#FFC107' }}>
                                                 {slide.title}
                                             </h3>
@@ -266,7 +264,7 @@ export default function OperationSec() {
                                                 style={{ width: '100%', height: 'auto' }}
                                             />
                                         </div>
-                                        <div className="opt-card rounded-3 p-3" style={{ backgroundColor: '#020e28', border: '1px solid rgba(255, 193, 7, 0.3)' }}>
+                                        <div className="opt-card rounded-3 p-3" style={{ backgroundColor: '#020e28', border: '2px solid #FFC107' }}>
                                             <span>
                                                 <img src={TabIcon} alt="Icon" style={{ width: '30px', height: '30px' }} />
                                             </span>
