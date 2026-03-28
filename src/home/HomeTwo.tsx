@@ -4,6 +4,7 @@ import SliderSec2 from "@/features/home-two/SliderSec2";
 import AboutSec2 from "@/features/home-two/AboutSec2";
 import ChooseSec2 from "@/features/home-two/ChooseSec2";
 import VideoSec2 from "@/features/home-two/VideoSec2";
+import TestimonialsSec from "@/features/home-two/TestimonialsSec";
 import OperationSec from "@/features/home-two/OperationSec";
 import FaqSec from "@/features/faq/FaqSec";
 import ChatWidget from "@/components/ChatWidget";
@@ -20,6 +21,8 @@ export default function HomeTwo() {
                 <ChooseSec2 />
 
                 <VideoSec2 />
+
+                <TestimonialsSec />
 
                 <OperationSec />
 

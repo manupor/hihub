@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import TabIcon from "@/images/tab-icon.png";
@@ -19,11 +18,6 @@ export default function OperationSec() {
         <>
             {/* Operation Section Start */}
             <section id="servicios" className="operation-sec position-relative sec-padding" style={{ backgroundColor: '#020e28' }}>
-                <div
-                    className="operate-bg jarallax bg-cover position-absolute"
-                    data-speed="0.8"
-                    style={{ backgroundImage: `url(${OptBg})` }}
-                ></div>
 
                 <div className="container ct-container">
                     <div className="row">
@@ -130,23 +124,16 @@ export default function OperationSec() {
                                                 alt="Air freight cargo plane"
                                             />
                                         </div>
-                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28' }}>
+                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28', marginTop: '20px' }}>
                                             <span>
                                                 <img src={TabIcon} alt="Icon" />
                                             </span>
-                                            <h3 className="mt-3 h5">
+                                            <h3 className="mt-3 h5" style={{ color: '#FFC107' }}>
                                                 {t('ops.card.title')}
                                             </h3>
-                                            <p>
+                                            <p style={{ color: '#ffffff' }}>
                                                 {t('ops.card.desc')}
                                             </p>
-                                            <Link
-                                                to="/single-service"
-                                                className="link-btn"
-                                            >
-                                                {t('ops.card.moreDetails')}
-                                                <i className="fa fa-arrow-right"></i>
-                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -165,23 +152,16 @@ export default function OperationSec() {
                                                 alt="Warehouse inventory storage"
                                             />
                                         </div>
-                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28' }}>
+                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28', marginTop: '20px' }}>
                                             <span>
                                                 <img src={TabIcon} alt="Icon" />
                                             </span>
-                                            <h3 className="mt-3 h5">
+                                            <h3 className="mt-3 h5" style={{ color: '#FFC107' }}>
                                                 {t('ops.card.title')}
                                             </h3>
-                                            <p>
+                                            <p style={{ color: '#ffffff' }}>
                                                 {t('ops.card.desc')}
                                             </p>
-                                            <Link
-                                                to="/single-service"
-                                                className="link-btn"
-                                            >
-                                                {t('ops.card.moreDetails')}
-                                                <i className="fa fa-arrow-right"></i>
-                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -200,23 +180,16 @@ export default function OperationSec() {
                                                 alt="Road logistics delivery truck"
                                             />
                                         </div>
-                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28' }}>
+                                        <div className="opt-card rounded-4 p-4" style={{ backgroundColor: '#020e28', marginTop: '20px' }}>
                                             <span>
                                                 <img src={TabIcon} alt="Icon" />
                                             </span>
-                                            <h3 className="mt-3 h5">
+                                            <h3 className="mt-3 h5" style={{ color: '#FFC107' }}>
                                                 {t('ops.tab3.title')}
                                             </h3>
-                                            <p>
+                                            <p style={{ color: '#ffffff' }}>
                                                 {t('ops.card.desc')}
                                             </p>
-                                            <Link
-                                                to="/single-service"
-                                                className="link-btn"
-                                            >
-                                                {t('ops.card.moreDetails')}
-                                                <i className="fa fa-arrow-right"></i>
-                                            </Link>
                                         </div>
                                     </div>
                                 </div>

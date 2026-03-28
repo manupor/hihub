@@ -1,0 +1,15 @@
+.grainient-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.grainient-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1057,7 +1057,11 @@ ul.ct-list li:before {
 .btn-primary:hover {
 	background-color: #FFB300;
 	border-color: #FFB300;
-	color: #000
+	color: #fff
+}
+
+.btn-primary:active {
+	color: #fff
 }
 
 .header.header-2 .btn-primary:hover {

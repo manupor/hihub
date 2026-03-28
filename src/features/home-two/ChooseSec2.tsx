@@ -1,210 +1,139 @@
-import { Link } from "react-router-dom";
-import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay, Pagination } from 'swiper/modules';
-import type { Swiper as SwiperType } from 'swiper';
-import { servicesData as servicesDataRaw } from "@/data/servicesData";
 import TextAnimation from "@/components/elements/TextAnimation";
-import ChooseMain from "@/images/choose-main-hihub.png";
-import Water from "@/images/icons/water.svg";
-import AirHeat from "@/images/icons/air-heat.svg";
-import Fan from "@/images/icons/fan.svg";
-import Celling from "@/images/icons/celling.svg";
-import AcCond from "@/images/icons/ac-cond.svg";
-import FloorHeat from "@/images/icons/floor-heat.svg";
-import ChooseBg from "@/images/choose-bg.png";
 import FadeInAdvanced from "@/components/elements/FadeInAdvanced";
+import { 
+  Search, 
+  ShieldCheck, 
+  Ship, 
+  Lightbulb, 
+  Globe, 
+  Monitor 
+} from 'lucide-react';
 
 export default function ChooseSec2() {
     const { t } = useTranslation();
-    const swiperRefProject = useRef<SwiperType | null>(null);
 
-    const servicesData = servicesDataRaw.map((s, i) => ({
-        ...s,
-        title: t(`svcCard.${i + 1}.title`),
-        description: t(`svcCard.${i + 1}.desc`),
-    }));
+    const services = [
+        {
+            title: "Sourcing and Procurement",
+            icon: Search,
+            items: [
+                "Identify and evaluate suppliers to source goods and materials.",
+                "Negotiate prices and terms to ensure the best deals for clients."
+            ]
+        },
+        {
+            title: "Quality Control and Inspection",
+            icon: ShieldCheck,
+            items: [
+                "Conduct quality checks and inspections on products before shipment.",
+                "Ensure compliance with safety and quality standards."
+            ]
+        },
+        {
+            title: "Logistics and Shipping",
+            icon: Ship,
+            items: [
+                "Manage the transportation and logistics of goods from suppliers to clients.",
+                "Handle customs clearance and documentation for international shipments."
+            ]
+        },
+        {
+            title: "Consulting Services",
+            icon: Lightbulb,
+            items: [
+                "Offer strategic advice on entering new markets, navigating regulations, and optimizing supply chains."
+            ]
+        },
+        {
+            title: "International Fairs",
+            icon: Globe,
+            items: [
+                "Attending China's largest trade fair gives you the chance to build relationships with around 25,000 suppliers and is the best place to look for business opportunities and bring them back to your country."
+            ]
+        },
+        {
+            title: "IT Services",
+            icon: Monitor,
+            items: [
+                "IT services encompass a broad range of technology solutions designed to support businesses in managing their digital infrastructure, improving efficiency, and driving growth."
+            ]
+        }
+    ];
 
-    // Navigation handlers for slider
-    const projectNextSlide = (): void => {
-        swiperRefProject.current?.slideNext();
-    };
-
-    const projectPrevSlide = (): void => {
-        swiperRefProject.current?.slidePrev();
-    };
     return (
         <>
             {/* Services Section Start */}
-            <div
-                className="services-sec2 sec-padding overflow-hidden"
+            <section
+                className="services-detailed-sec sec-padding overflow-hidden"
                 style={{ backgroundColor: '#020e28' }}
             >
-                <div className="container ct-container p-0">
-                    <div className="row align-items-center serv-header">
-                        <div className="col-lg-8">
-                            <div className="sec-intro">
-                                <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
-                                    {t('services2.subtitle')}
-                                </span>
-                                <h2 className="sec-title" style={{ color: '#FFC107' }}>
-                                    {t('services2.title')}
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="header-slider-nav">
-                                <div onClick={projectNextSlide} className="swiper-button-next"></div>
-                                <div onClick={projectPrevSlide} className="swiper-button-prev"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="service-slider2 swiper">
-                                <div className="swiper-wrapper">
-                                    <Swiper
-                                        onSwiper={(swiper) => {
-                                            swiperRefProject.current = swiper;
-                                        }}
-                                        modules={[Navigation, Autoplay, Pagination]}
-                                        loop={true}
-                                        spaceBetween={30}
-                                        speed={600}
-                                        autoplay={{
-                                            delay: 4000,
-                                            disableOnInteraction: false
-                                        }}
-                                        pagination={{
-                                            el: ".ct-pagination .swiper-pagination",
-                                            clickable: true
-                                        }}
-                                        breakpoints={{
-                                            0: {
-                                                slidesPerView: 1
-                                            },
-                                            768: {
-                                                slidesPerView: 2
-                                            },
-                                            992: {
-                                                slidesPerView: 3
-                                            },
-                                            1400: {
-                                                slidesPerView: "auto"
-                                            }
-                                        }}
-                                    >
-                                        {servicesData.map((service, index) => (
-                                            <SwiperSlide key={index}>
-                                                <div className="swiper-slide">
-                                                    <div className="service-card2 round bg-info">
-                                                        <div
-                                                            className="serv-thumb"
-                                                            style={{
-                                                                backgroundImage: `url(${service.backgroundImage})`,
-                                                            }}
-                                                        >
-                                                            <span className="icon round-2">
-                                                                <img src={service.icon} />
-                                                            </span>
-                                                        </div>
-                                                        <h3 className="display-4">
-                                                            <Link to={service.link}>
-                                                                {service.title}
-                                                            </Link>
-                                                        </h3>
-                                                        <p>{service.description}</p>
-                                                    </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Services Section End */}
-            {/* Choose Section Start */}
-            <section
-                className="choose-sec2 bg-cover sec-padding"
-                style={{ backgroundImage: `url(${ChooseBg})`, backgroundColor: '#020e28' }}
-            >
-                <div className="container">
-                    <div className="sec-intro mx-auto text-center">
-                        <span className="sub-title2 fadeInUp" style={{ color: '#FFC107' }}>
-                            {t('services2.choose.subtitle')}
+                <div className="container ct-container">
+                    <div className="sec-intro mx-auto text-center mb-5">
+                        <span className="sub-title2 fadeInUp single" style={{ color: '#FFC107' }}>
+                            {t('services2.subtitle', 'Our Services')}
                         </span>
-                        <h2 className="sec-title" style={{ color: '#FFC107' }}>
+                        <h2 className="sec-title text-center" style={{ color: '#FFC107', maxWidth: '900px', margin: '0 auto', lineHeight: '1.3' }}>
                             <TextAnimation animationStyle="style1">
-                                {t('services2.choose.title')}
+                                Strategic Solutions for Your Business
                             </TextAnimation>
                         </h2>
+                        <p className="lead mt-3 text-center" style={{ color: '#ffffff', maxWidth: '800px', margin: '0 auto' }}>
+                            We provide strategic, high-impact solutions designed to meet the specific demands of your business.
+                        </p>
                     </div>
-                    <div className="row g-1">
-                        <div className="col-lg-3 col-sm-6">
-                            <FadeInAdvanced className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.seaFreight')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={Water} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                            <FadeInAdvanced className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.airShipping')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={AirHeat} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                            <FadeInAdvanced className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.landTransport')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={Fan} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                        </div>
-                        <div className="col-lg-6 d-sm-none d-lg-block">
-                            <div className="choose-media">
-                                <img src={ChooseMain} className="img-fluid" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-sm-6 reverse-choose">
-                            <FadeInAdvanced delay={100} className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.airConsulting')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={Celling} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                            <FadeInAdvanced delay={100} className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.packingHandling')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={AcCond} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                            <FadeInAdvanced delay={100} className="single-choose fadeInUp" variant="fadeInUp">
-                                <h3 className="display-6 fw-bold">
-                                    {t('services2.floorPlanning')}
-                                </h3>
-                                <span className="icon bg-primary">
-                                    <img src={FloorHeat} alt="Fan" />
-                                </span>
-                            </FadeInAdvanced>
-                        </div>
+
+                    <div className="row g-4 align-items-stretch">
+                        {services.map((service, index) => {
+                            const IconComponent = service.icon;
+                            return (
+                                <div className="col-lg-4 col-md-6" key={index}>
+                                    <FadeInAdvanced variant="fadeInUp" delay={index * 100}>
+                                        <div 
+                                            className="service-detail-card p-4 rounded-4 h-100 d-flex flex-column"
+                                            style={{ 
+                                                backgroundColor: '#020e28',
+                                                border: '1px solid rgba(255, 193, 7, 0.5)',
+                                                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+                                                minHeight: '280px'
+                                            }}
+                                        >
+                                            <div className="d-flex align-items-center mb-3">
+                                                <div 
+                                                    className="icon-wrapper d-flex align-items-center justify-content-center rounded-3 me-3"
+                                                    style={{ 
+                                                        width: '40px', 
+                                                        height: '40px', 
+                                                        backgroundColor: 'rgba(255, 193, 7, 0.2)'
+                                                    }}
+                                                >
+                                                    <IconComponent size={20} color="#FFC107" strokeWidth={2} />
+                                                </div>
+                                                <h3 className="h6 mb-0 fw-bold" style={{ color: '#FFC107' }}>
+                                                    {service.title}
+                                                </h3>
+                                            </div>
+                                            <ul className="list-unstyled mb-0 flex-grow-1">
+                                                {service.items.map((item, idx) => (
+                                                    <li 
+                                                        key={idx} 
+                                                        className="mb-2 d-flex"
+                                                        style={{ color: '#ffffff', fontSize: '0.9rem', lineHeight: '1.5' }}
+                                                    >
+                                                        <span className="me-2 flex-shrink-0" style={{ color: '#FFC107' }}>•</span>
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </FadeInAdvanced>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
-            {/* Choose Section End */}
+            {/* Services Section End */}
         </>
     );
 }

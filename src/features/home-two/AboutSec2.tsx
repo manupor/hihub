@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import AboutM from '@/images/consultants-img-06.jpg';
 import Af1 from '@/images/af-1.png';
@@ -17,7 +16,7 @@ export default function AboutSec2() {
                   {/* Left column - LogiXpress style: large image + years badge bottom-right */}
                   <div className="col-lg-6">
                      <FadeInAdvanced variant='fadeInLeft'>
-                        <div>
+                        <div style={{ marginTop: '-260px' }}>
                            <img src={AboutM} className="img-fluid w-100" alt="HiHub Global Operations" style={{ borderRadius: '8px', objectFit: 'cover', maxHeight: '500px' }} />
                         </div>
                      </FadeInAdvanced>
@@ -40,7 +39,10 @@ export default function AboutSec2() {
                            <li>{t('about2.check4')}</li>
                         </ul>
                         <div className="d-sm-flex align-items-center about-cta gap-5">
-                           <Link to="/about" className="btn btn-primary">{t('about2.btn')} <i className="fa fa-arrow-right"></i><span style={{ top: '267.45px', left: '119.6px' }}></span> </Link>
+                           <div className="badge bg-primary text-white px-4 py-3 rounded-pill d-inline-flex align-items-center gap-2">
+                              <span>{t('about2.btn')}</span>
+                              <i className="fa fa-arrow-right"></i>
+                           </div>
                         </div>
                      </div>
                      <div className="about-footer d-sm-flex align-items-center gap-5 bg-shade round mt-5">

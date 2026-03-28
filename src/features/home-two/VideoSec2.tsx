@@ -10,7 +10,7 @@ export default function VideoSec2() {
             {/* Brands Section Start */}
             <section id="clientes" className="brands-sec2" style={{ backgroundColor: '#020e28', paddingTop: '40px', paddingBottom: '40px' }}>
                 <div className="container ct-container brands-wrap2">
-                    <h3 className="display-3 text-center" style={{ color: '#ffffff' }}>
+                    <h3 className="display-3 text-center" style={{ color: '#ffffff', marginBottom: '40px' }}>
                         {t('clients.title')}
                     </h3>
                     <div className="row">

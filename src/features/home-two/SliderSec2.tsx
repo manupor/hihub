@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -86,22 +85,14 @@ export default function SliderSec2() {
                                             triggerOnce={false}
                                         >
                                             <div className="d-sm-flex slide-cta gap-4">
-                                                <Link
-                                                    to="/quote"
+                                                <button
+                                                    onClick={() => window.dispatchEvent(new CustomEvent('openChatWidget'))}
                                                     className="btn btn-hover btn-primary"
                                                 >
                                                     {t('hero.slider.getStarted')}
                                                     <i className="fa fa-arrow-right"></i>
                                                     <span></span>
-                                                </Link>
-                                                <Link
-                                                    to="#how-it-works"
-                                                    className="btn btn-outline"
-                                                >
-                                                    {t('hero.slider.howItWorks')}
-                                                    <i className="fa fa-arrow-right"></i>
-                                                    <span></span>
-                                                </Link>
+                                                </button>
                                             </div>
                                         </FadeInAdvanced>
                                     </div>
