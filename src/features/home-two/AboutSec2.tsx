@@ -12,7 +12,7 @@ export default function AboutSec2() {
    return (
       <>
          {/* About Section Start */}
-         <section className="about-sec2 overflow-hidden">
+         <section id="nosotros" className="about-sec2 overflow-hidden">
             <div className="container">
                <div className="row g-4 gx-5 align-items-center">
                   {/* Left column - LogiXpress style: large image + years badge bottom-right */}

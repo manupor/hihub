@@ -28,25 +28,22 @@ export default function Footer() {
                         </div>
                         <div className="col-lg-4 col-sm-6 mb-5 mb-lg-0">
                             <div className="footer-widget">
-                                <h3 className="widget-title">{t('footer.servicesTitle')}</h3>
+                                <h3 className="widget-title">{t('footer.quickLinks', 'Enlaces Rápidos')}</h3>
                                 <ul>
                                     <li>
-                                        <Link to="/#services">{t('footer.seaFreight')}</Link>
+                                        <Link to="/#inicio">{t('footer.home', 'Inicio')}</Link>
                                     </li>
                                     <li>
-                                        <Link to="/#services">{t('footer.airShipping')}</Link>
+                                        <Link to="/#nosotros">{t('footer.about', 'Nosotros')}</Link>
                                     </li>
                                     <li>
-                                        <Link to="/#services">{t('footer.landTransport')}</Link>
+                                        <Link to="/#servicios">{t('footer.services', 'Servicios')}</Link>
                                     </li>
                                     <li>
-                                        <Link to="/#services">{t('footer.warehousing')}</Link>
+                                        <Link to="/#clientes">{t('footer.clients', 'Clientes')}</Link>
                                     </li>
                                     <li>
-                                        <Link to="/#services">{t('footer.consulting')}</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/#services">{t('footer.customsClearance')}</Link>
+                                        <Link to="/#faq">{t('footer.faq', 'FAQ')}</Link>
                                     </li>
                                 </ul>
                             </div>

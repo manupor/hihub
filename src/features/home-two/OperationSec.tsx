@@ -18,7 +18,7 @@ export default function OperationSec() {
     return (
         <>
             {/* Operation Section Start */}
-            <section className="operation-sec position-relative sec-padding" style={{ backgroundColor: '#020e28' }}>
+            <section id="servicios" className="operation-sec position-relative sec-padding" style={{ backgroundColor: '#020e28' }}>
                 <div
                     className="operate-bg jarallax bg-cover position-absolute"
                     data-speed="0.8"

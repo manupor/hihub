@@ -12,7 +12,7 @@ export default function SliderSec2() {
 
     return (
         <>
-            <section className="slider-sec2 position-relative">
+            <section id="inicio" className="slider-sec2 position-relative">
                 <div className="hero-slider2 swiper">
                     <Swiper
                         modules={[EffectCreative]}

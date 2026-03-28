@@ -26,7 +26,7 @@ export default function FaqSec() {
     return (
         <>
             {/* FAQ Section Start */}
-            <section className="faq-sec overflow-hidden sec-padding position-relative">
+            <section id="faq" className="faq-sec overflow-hidden sec-padding position-relative">
                 <div className="container">
                     <div className="sec-intro mx-auto text-center">
                         <span className="sub-title2 fadeInUp" style={{ color: '#ffffff' }}>
