@@ -48,9 +48,9 @@ export default function AboutSec2() {
                      }
                   }, 30);
 
-                  // Animate years to 10+
+                  // Animate years to 18+
                   let currentYears = 0;
-                  const targetYears = 10;
+                  const targetYears = 18;
                   const incrementYears = targetYears / 50;
                   const timerYears = setInterval(() => {
                      currentYears += incrementYears;
