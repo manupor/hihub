@@ -43,8 +43,6 @@ export default function ChatWidget() {
     console.log('Initial chat language:', lang);
     return lang;
   });
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Listen for language changes
   useEffect(() => {
@@ -105,12 +103,11 @@ export default function ChatWidget() {
       const newMessages: Message[] = [...prev, { 
         role: 'user' as const, 
         content: userMessage,
-        image: previewImage || undefined
+        image: imageBase64 ? `data:image/jpeg;base64,${imageBase64}` : undefined
       }];
       console.log('Messages after user message:', newMessages);
       return newMessages;
     });
-    setPreviewImage(null);
 
     try {
       console.log('Fetching from:', `${API_URL}/api/chat`);
