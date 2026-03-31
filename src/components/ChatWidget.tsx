@@ -28,8 +28,8 @@ export default function ChatWidget() {
   const [showBookingForm, setShowBookingForm] = useState(false);
   const [bookingData, setBookingData] = useState({ name: '', email: '', phone: '' });
   const [appointmentConfirmed, setAppointmentConfirmed] = useState(false);
-  const [previewImage, setPreviewImage] = useState<string | null>(null);
-  
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
   // Detect initial language immediately
   const getInitialLanguage = () => {
     const htmlLang = document.documentElement.lang || 
