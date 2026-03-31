@@ -197,24 +197,6 @@ export default function ChatWidget() {
     setIsLoading(false);
   };
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setPreviewImage(reader.result as string);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const sendImage = () => {
-    if (previewImage) {
-      const base64 = previewImage.split(',')[1];
-      handleSend(base64);
-    }
-  };
-
   return (
     <div className="hihub-chat-widget-container">
       <button
@@ -258,8 +240,26 @@ export default function ChatWidget() {
               </svg>
             </button>
           </div>
+          
+          {/* Progress Indicator */}
+          <div className="hihub-progress-container">
+            <div className="hihub-progress-text">
+              {pageLanguage === 'en' ? `Question ${Math.min(messages.length, 7)} of 7` : `Pregunta ${Math.min(messages.length, 7)} de 7`}
+            </div>
+            <div className="hihub-progress-bar">
+              <div className="hihub-progress-fill" style={{ width: `${(Math.min(messages.length, 7) / 7) * 100}%` }}></div>
+            </div>
+          </div>
 
           <div className="hihub-messages-container">
+            {/* Welcome Card */}
+            {messages.length <= 1 && (
+              <div className="hihub-welcome-card">
+                <span className="hihub-welcome-icon">👋</span>
+                <p>{pageLanguage === 'en' ? 'This process takes less than 3 minutes' : 'Este proceso toma menos de 3 minutos'}</p>
+              </div>
+            )}
+            
             {messages.map((msg, idx) => (
               <div key={idx} className={`hihub-message ${msg.role}`}>
                 {msg.image && (
@@ -269,7 +269,8 @@ export default function ChatWidget() {
               </div>
             ))}
             
-            {isLoading && (
+            {/* Typing indicator - show when loading OR when only one message */}
+            {(isLoading || messages.length === 1) && (
               <div className="hihub-message assistant">
                 <div className="hihub-typing-indicator">
                   <span></span>
@@ -352,32 +353,7 @@ export default function ChatWidget() {
 
           {!showCalendar && !appointmentConfirmed && (
             <div className="hihub-input-area">
-              {previewImage && (
-                <div className="hihub-image-preview">
-                  <img src={previewImage} alt="Preview" />
-                  <button onClick={() => setPreviewImage(null)}>×</button>
-                  <button className="hihub-send-image-btn" onClick={sendImage}>Enviar imagen</button>
-                </div>
-              )}
-              
               <div className="hihub-input-row">
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleImageUpload}
-                  ref={fileInputRef}
-                  style={{ display: 'none' }}
-                />
-                <button 
-                  className="hihub-attach-btn"
-                  onClick={() => fileInputRef.current?.click()}
-                  title="Adjuntar imagen"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
-                  </svg>
-                </button>
-                
                 <input
                   type="text"
                   value={input}
