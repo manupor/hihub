@@ -206,7 +206,7 @@ const resources = {
       "servicios.ground": "Ground Transport",
       "servicios.consulting": "Air Consulting",
       "servicios.packaging": "Packaging & Handling",
-      "servicios.planning": "Sourcing/Manufacturing",
+      "servicios.planning": "SOURCING/MANUFACTURING",
 
       // Footer
       "footer.quickLinks": "Quick Links",
@@ -421,7 +421,7 @@ const resources = {
       "servicios.ground": "Transporte Terrestre",
       "servicios.consulting": "Consultoría Aérea",
       "servicios.packaging": "Embalaje y Manejo",
-      "servicios.planning": "Sourcing/Fabricación",
+      "servicios.planning": "SOURCING/FABRICACIÓN",
 
       // Footer
       "footer.quickLinks": "Enlaces Rápidos",
