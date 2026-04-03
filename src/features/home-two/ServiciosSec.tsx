@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
-import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -9,6 +9,7 @@ export default function ServiciosSec() {
     const { t } = useTranslation();
     const [showModal, setShowModal] = useState(false);
     const [showSourcingModal, setShowSourcingModal] = useState(false);
+    const [showVolumetricsModal, setShowVolumetricsModal] = useState(false);
 
     const leftServices = [
         { titleKey: "servicios.air", icon: Globe },
@@ -61,8 +62,9 @@ export default function ServiciosSec() {
                                         onClick={() => {
                                             if (service.titleKey === 'servicios.air') setShowModal(true);
                                             if (service.titleKey === 'servicios.planning') setShowSourcingModal(true);
+                                            if (service.titleKey === 'servicios.ground') setShowVolumetricsModal(true);
                                         }}
-                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning') ? 'pointer' : 'default' }}
+                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning' || service.titleKey === 'servicios.ground') ? 'pointer' : 'default' }}
                                     >
                                         <h3 className="display-6 fw-bold mb-0" style={{ color: '#000', fontSize: 'clamp(0.85rem, 3vw, 1.1rem)' }}>
                                             {t(service.titleKey)}
@@ -174,7 +176,11 @@ export default function ServiciosSec() {
                     {/* Row 2: Ground + Consulting */}
                     <div className="col-6">
                         <FadeInAdvanced variant="fadeInUp" delay={0.2}>
-                            <div className="single-choose d-flex align-items-center justify-content-between p-2" style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px' }}>
+                            <div 
+                                className="single-choose d-flex align-items-center justify-content-between p-2" 
+                                onClick={() => setShowVolumetricsModal(true)}
+                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px', cursor: 'pointer' }}
+                            >
                                 <h3 className="fw-bold mb-0 text-start" style={{ color: '#000', fontSize: '0.8rem', flexGrow: 1, marginRight: '8px' }}>
                                     {t('servicios.ground')}
                                 </h3>
@@ -509,6 +515,128 @@ export default function ServiciosSec() {
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <Flame size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
                                         <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Exclusividad y control total</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Volumetrics Modal */}
+            {showVolumetricsModal && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
+                    }}
+                    onClick={() => setShowVolumetricsModal(false)}
+                >
+                    <div 
+                        style={{
+                            backgroundColor: 'white',
+                            borderRadius: '16px',
+                            maxWidth: '700px',
+                            width: '100%',
+                            maxHeight: '90vh',
+                            overflow: 'auto',
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out'
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowVolumetricsModal(false)}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '8px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '8px',
+                                transition: 'background-color 0.2s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        >
+                            <X size={24} color="#000" />
+                        </button>
+
+                        {/* Modal content */}
+                        <div style={{ padding: '32px' }}>
+                            <h2 style={{ color: '#020e28', marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>
+                                Embalaje y Volumetría
+                            </h2>
+                            <p style={{ color: '#6b7280', marginBottom: '24px', fontSize: '14px' }}>
+                                Hihub Global Tech Limited
+                            </p>
+
+                            {/* FCL */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Box size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        FCL — Contenedor completo (Full Container Load)
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '8px' }}>Capacidad típica:</p>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '4px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>20GP → ~28 CBM</p>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '4px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>40GP → ~58 CBM</p>
+                                        </div>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>40HQ → ~68 CBM</p>
+                                        </div>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <DollarSign size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Beneficio cliente: Menor costo por unidad y mayor control sobre la carga.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* LCL */}
+                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Package size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        LCL — Carga consolidada (Less than Container Load)
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Compartes contenedor con otros importadores.</p>
+                                    </div>
+                                    <div style={{ marginBottom: '12px' }}>
+                                        <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '8px' }}>Capacidad:</p>
+                                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                            <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                            <p style={{ margin: 0, color: '#ffffff' }}>Desde 1 CBM hasta lo que necesites</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
