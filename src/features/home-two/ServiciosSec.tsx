@@ -1059,50 +1059,6 @@ export default function ServiciosSec() {
                                 </div>
                             </div>
 
-                            {/* Valor para el cliente */}
-                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Shield size={20} color="#FFC107" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
-                                        Valor para el cliente
-                                    </h3>
-                                </div>
-                                <div style={{ marginLeft: '28px' }}>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Seguridad jurídica real (no promesas)</p>
-                                    </div>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Protección contractual desde origen</p>
-                                    </div>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Reducción de riesgo financiero</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Diferencia clave */}
-                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <AlertTriangle size={20} color="#FFC107" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
-                                        Diferencia clave
-                                    </h3>
-                                </div>
-                                <div style={{ marginLeft: '28px' }}>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Esto no se puede hacer desde fuera de China</p>
-                                    </div>
-                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <ArrowRight size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Sin estructura local, no hay control real</p>
-                                    </div>
-                                </div>
-                            </div>
-
                             {/* Banking Partners */}
                             <div style={{ padding: '20px', backgroundColor: '#f9fafb', borderRadius: '12px', textAlign: 'center' }}>
                                 <p style={{ margin: 0, color: '#6b7280', fontSize: '12px', marginBottom: '12px', fontWeight: 'bold' }}>SOCIOS BANCARIOS</p>
