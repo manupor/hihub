@@ -12,6 +12,7 @@ const resources = {
       "nav.contact": "Contact",
       "nav.contactUs": "Contact Us",
       "nav.about": "About Us",
+      "nav.portal": "Customer Portal",
       
       // Hero Section
       "hero.title": "Bridge Between Costa Rica and China for OEM & ODM Solutions",
@@ -224,6 +225,7 @@ const resources = {
       "nav.clients": "Clientes",
       "nav.contact": "Contacto",
       "nav.contactUs": "Contáctanos",
+      "nav.portal": "Portal del Cliente",
       
       // Hero Section
       "hero.title": "Puente entre Costa Rica y China para Soluciones OEM y ODM",

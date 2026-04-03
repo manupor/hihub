@@ -36,4 +36,9 @@ export const menuData: MenuItem[] = [
         key: "contact",
         path: "/#contacto",
     },
+    {
+        label: "Portal del Cliente",
+        key: "portal",
+        path: "/portal",
+    },
 ];
