@@ -1021,15 +1021,15 @@ export default function ServiciosSec() {
                                     <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px', fontWeight: 'bold' }}>China · Hong Kong · Singapur</p>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Cuentas operativas en Asia</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>JPMorgan Chase Bank N.A., Singapore Branch</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Flujo financiero seguro y trazable</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Hihub Global Tech Limited: Citibank N.A. Hong Kong</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Relación con banca internacional (Citi / JP Morgan)</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>China Bank Hangzhou China</p>
                                     </div>
                                 </div>
                             </div>
