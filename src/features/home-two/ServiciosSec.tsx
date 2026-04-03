@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
 import EmbalajeImg from '../../../template/images/background/embalaje y volumetria.jpeg';
-import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings } from 'lucide-react';
+import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings, Shield, FileText, CheckCircle } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
 
@@ -12,6 +12,7 @@ export default function ServiciosSec() {
     const [showSourcingModal, setShowSourcingModal] = useState(false);
     const [showVolumetricsModal, setShowVolumetricsModal] = useState(false);
     const [showPackagingModal, setShowPackagingModal] = useState(false);
+    const [showCustomsModal, setShowCustomsModal] = useState(false);
 
     const leftServices = [
         { titleKey: "servicios.air", icon: Globe },
@@ -113,8 +114,9 @@ export default function ServiciosSec() {
                                         className="single-choose d-flex align-items-center mb-3"
                                         onClick={() => {
                                             if (service.titleKey === 'servicios.consulting') setShowVolumetricsModal(true);
+                                            if (service.titleKey === 'servicios.packaging') setShowCustomsModal(true);
                                         }}
-                                        style={{ cursor: service.titleKey === 'servicios.consulting' ? 'pointer' : 'default' }}
+                                        style={{ cursor: (service.titleKey === 'servicios.consulting' || service.titleKey === 'servicios.packaging') ? 'pointer' : 'default' }}
                                     >
                                         <span 
                                             className="icon d-flex align-items-center justify-content-center"
@@ -783,6 +785,159 @@ export default function ServiciosSec() {
                                     maxWidth: '100%'
                                 }} 
                             />
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Customs Modal */}
+            {showCustomsModal && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
+                    }}
+                    onClick={() => setShowCustomsModal(false)}
+                >
+                    <div 
+                        style={{
+                            backgroundColor: 'white',
+                            borderRadius: '16px',
+                            maxWidth: '700px',
+                            width: '100%',
+                            maxHeight: '90vh',
+                            overflow: 'auto',
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out'
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowCustomsModal(false)}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '8px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '8px',
+                                transition: 'background-color 0.2s'
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        >
+                            <X size={24} color="#000" />
+                        </button>
+
+                        {/* Modal content */}
+                        <div style={{ padding: '32px' }}>
+                            <h2 style={{ color: '#020e28', marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>
+                                Aduanas y Regulaciones
+                            </h2>
+                            <p style={{ color: '#6b7280', marginBottom: '24px', fontSize: '14px' }}>
+                                Hihub Global Tech Limited
+                            </p>
+
+                            {/* Certificaciones */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <Shield size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Certificaciones
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px' }}>Cumplimiento garantizado para tu mercado</p>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                        {['NFPA', 'CE', 'UL', 'ISO', 'FDA'].map((cert) => (
+                                            <span 
+                                                key={cert}
+                                                style={{ 
+                                                    backgroundColor: '#FFC107', 
+                                                    color: '#020e28', 
+                                                    padding: '6px 12px', 
+                                                    borderRadius: '6px',
+                                                    fontWeight: 'bold',
+                                                    fontSize: '14px'
+                                                }}
+                                            >
+                                                {cert}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Documentación */}
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <FileText size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Documentación
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px' }}>Importación sin fricciones ni bloqueos</p>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                        {['BL', 'CO', 'Factura', 'Packing List'].map((doc) => (
+                                            <span 
+                                                key={doc}
+                                                style={{ 
+                                                    backgroundColor: '#FFC107', 
+                                                    color: '#020e28', 
+                                                    padding: '6px 12px', 
+                                                    borderRadius: '6px',
+                                                    fontWeight: 'bold',
+                                                    fontSize: '14px'
+                                                }}
+                                            >
+                                                {doc}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Valor HIHUB */}
+                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
+                                    <CheckCircle size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
+                                        Valor HIHUB
+                                    </h3>
+                                </div>
+                                <div style={{ marginLeft: '28px' }}>
+                                    <p style={{ margin: 0, color: '#FFC107', fontWeight: 'bold', marginBottom: '12px' }}>Control total desde origen</p>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Validación de certificaciones reales</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Documentación correcta desde China</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Cumplimiento legal internacional</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

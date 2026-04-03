@@ -205,7 +205,7 @@ const resources = {
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Packaging & Volumetrics",
       "servicios.consulting": "International Transport",
-      "servicios.packaging": "Packaging & Handling",
+      "servicios.packaging": "Customs & Regulations",
       "servicios.planning": "Sourcing/Manufacturing",
 
       // Footer
@@ -420,7 +420,7 @@ const resources = {
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Embalaje y Volumetría",
       "servicios.consulting": "Transporte Internacional",
-      "servicios.packaging": "Embalaje y Manejo",
+      "servicios.packaging": "Aduanas y Regulaciones",
       "servicios.planning": "Sourcing/Fabricación",
 
       // Footer
