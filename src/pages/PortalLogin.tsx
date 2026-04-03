@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import SEO from '@/components/elements/SEO';
 
 const API_URL = 'https://hihub-agent.onrender.com/api/portal/login';
