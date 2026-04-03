@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiciosImg from '@/images/servicios.png';
+import EmbalajeImg from '../../../template/images/background/embalaje y volumetria.jpeg';
 import { Ship, Truck, Users, Package, LayoutGrid, MapPin, DollarSign, AlertTriangle, ArrowRight, X, Factory, Anchor, Globe, Zap, Scale, Flame, Box, Settings } from 'lucide-react';
 import TextAnimation from '@/components/elements/TextAnimation';
 import FadeInAdvanced from '@/components/elements/FadeInAdvanced';
@@ -10,6 +11,7 @@ export default function ServiciosSec() {
     const [showModal, setShowModal] = useState(false);
     const [showSourcingModal, setShowSourcingModal] = useState(false);
     const [showVolumetricsModal, setShowVolumetricsModal] = useState(false);
+    const [showPackagingModal, setShowPackagingModal] = useState(false);
 
     const leftServices = [
         { titleKey: "servicios.air", icon: Globe },
@@ -62,8 +64,9 @@ export default function ServiciosSec() {
                                         onClick={() => {
                                             if (service.titleKey === 'servicios.air') setShowModal(true);
                                             if (service.titleKey === 'servicios.planning') setShowSourcingModal(true);
+                                            if (service.titleKey === 'servicios.ground') setShowPackagingModal(true);
                                         }}
-                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning') ? 'pointer' : 'default' }}
+                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning' || service.titleKey === 'servicios.ground') ? 'pointer' : 'default' }}
                                     >
                                         <h3 className="display-6 fw-bold mb-0" style={{ color: '#000', fontSize: 'clamp(0.85rem, 3vw, 1.1rem)' }}>
                                             {t(service.titleKey)}
@@ -183,7 +186,8 @@ export default function ServiciosSec() {
                         <FadeInAdvanced variant="fadeInUp" delay={0.2}>
                             <div 
                                 className="single-choose d-flex align-items-center justify-content-between p-2" 
-                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px' }}
+                                onClick={() => setShowPackagingModal(true)}
+                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px', cursor: 'pointer' }}
                             >
                                 <h3 className="fw-bold mb-0 text-start" style={{ color: '#000', fontSize: '0.8rem', flexGrow: 1, marginRight: '8px' }}>
                                     {t('servicios.ground')}
@@ -705,6 +709,80 @@ export default function ServiciosSec() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Packaging Modal */}
+            {showPackagingModal && (
+                <div 
+                    style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        backgroundColor: 'rgba(0,0,0,0.7)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                        padding: '20px',
+                        animation: 'fadeIn 0.2s ease-out'
+                    }}
+                    onClick={() => setShowPackagingModal(false)}
+                >
+                    <div 
+                        style={{
+                            backgroundColor: 'white',
+                            borderRadius: '16px',
+                            maxWidth: '1000px',
+                            width: '100%',
+                            maxHeight: '90vh',
+                            overflow: 'auto',
+                            position: 'relative',
+                            animation: 'scaleIn 0.3s ease-out',
+                            padding: '20px'
+                        }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Close button */}
+                        <button
+                            onClick={() => setShowPackagingModal(false)}
+                            style={{
+                                position: 'absolute',
+                                top: '16px',
+                                right: '16px',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                padding: '8px',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                borderRadius: '8px',
+                                transition: 'background-color 0.2s',
+                                zIndex: 1
+                            }}
+                            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f3f4f6'}
+                            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+                        >
+                            <X size={24} color="#000" />
+                        </button>
+
+                        {/* Image */}
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <img 
+                                src={EmbalajeImg} 
+                                alt="Visión Real de Capacidad de Contenedores" 
+                                style={{ 
+                                    width: '100%', 
+                                    height: 'auto', 
+                                    borderRadius: '12px',
+                                    maxWidth: '100%'
+                                }} 
+                            />
                         </div>
                     </div>
                 </div>
