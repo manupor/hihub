@@ -1039,22 +1039,25 @@ export default function ServiciosSec() {
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
                                     <FileText size={20} color="#FFC107" />
                                     <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
-                                        Respaldo legal internacional
+                                        Respaldo legal internacional:
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
-                                    <p style={{ margin: 0, color: '#ffffff', marginBottom: '12px', fontWeight: 'bold' }}>Equipos legales en Hong Kong y Shanghai China</p>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Contratos empresa–empresa estructurados correctamente</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Contratos empresa–empresa estructurados para ejecución en China</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Jurisdicción clara y ejecutable</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Soporte legal en Hong Kong y China</p>
+                                    </div>
+                                    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
+                                        <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Alineación entre contrato, pago y proveedor</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Protección ante incumplimientos</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Base jurídica real, no simbólica</p>
                                     </div>
                                 </div>
                             </div>
