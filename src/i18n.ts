@@ -199,8 +199,8 @@ const resources = {
       "testimonials.quote6": "HiHub made my artificial plant dream a reality - turning startup fears into a thriving business.",
 
       // Servicios Section
-      "servicios.subtitle": "WHAT WE OFFER",
-      "servicios.title": "Transport Services That Set Us Apart",
+      "servicios.subtitle": "Logistics + Business",
+      "servicios.title": "Key Elements of International Trade",
       "servicios.maritime": "Maritime Freight",
       "servicios.air": "ESSENTIAL INCOTERMS",
       "servicios.ground": "Ground Transport",
@@ -414,8 +414,8 @@ const resources = {
       "testimonials.quote6": "HiHub hizo realidad mi sueño de plantas artificiales: convirtiendo los temores de una startup en un negocio próspero.",
 
       // Servicios Section
-      "servicios.subtitle": "LO QUE OFRECEMOS",
-      "servicios.title": "Servicios de Transporte que Nos Distinguen",
+      "servicios.subtitle": "Logistica + Negocio",
+      "servicios.title": "Elementos clave del comercio internacional",
       "servicios.maritime": "Flete Marítimo",
       "servicios.air": "INCOTERMS ESENCIALES",
       "servicios.ground": "Transporte Terrestre",
