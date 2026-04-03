@@ -1025,11 +1025,11 @@ export default function ServiciosSec() {
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>Hihub Global Tech Limited: Citibank N.A. Hong Kong</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Citibank N.A. Hong Kong</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                         <CheckCircle size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#ffffff' }}>China Bank Hangzhou China</p>
+                                        <p style={{ margin: 0, color: '#ffffff' }}>Bank of China Hangzhou Shanghai branch</p>
                                     </div>
                                 </div>
                             </div>
