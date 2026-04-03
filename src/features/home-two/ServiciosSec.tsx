@@ -450,61 +450,61 @@ export default function ServiciosSec() {
                             </p>
 
                             {/* Ready-made */}
-                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#f0fdf4', borderRadius: '12px' }}>
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Zap size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Zap size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         Ready-made
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <ArrowRight size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Enfoque HIHUB:</strong> Selección directa de fábrica</p>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Enfoque HIHUB:</strong> Selección directa de fábrica</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <Zap size={16} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Rapidez y ejecución inmediata</p>
+                                        <Zap size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Rapidez y ejecución inmediata</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* OEM */}
-                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#fef3c7', borderRadius: '12px' }}>
+                            <div style={{ marginBottom: '20px', padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Scale size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Scale size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         OEM
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <ArrowRight size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Enfoque HIHUB:</strong> Personalización sobre base existente</p>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Enfoque HIHUB:</strong> Personalización sobre base existente</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <Scale size={16} color="#f59e0b" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Personalización y diferenciación</p>
+                                        <Scale size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Personalización y diferenciación</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* ODM */}
-                            <div style={{ padding: '20px', backgroundColor: '#fee2e2', borderRadius: '12px' }}>
+                            <div style={{ padding: '20px', backgroundColor: '#020e28', borderRadius: '12px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-                                    <Flame size={20} color="#F7941D" />
-                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#020e28' }}>
+                                    <Flame size={20} color="#FFC107" />
+                                    <h3 style={{ margin: 0, fontSize: '18px', fontWeight: 'bold', color: '#FFC107' }}>
                                         ODM
                                     </h3>
                                 </div>
                                 <div style={{ marginLeft: '28px' }}>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '8px' }}>
-                                        <ArrowRight size={16} color="#6b7280" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151' }}><strong>Enfoque HIHUB:</strong> Desarrollo desde cero</p>
+                                        <ArrowRight size={16} color="#ffffff" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff' }}><strong>Enfoque HIHUB:</strong> Desarrollo desde cero</p>
                                     </div>
                                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                                        <Flame size={16} color="#ef4444" style={{ marginTop: '2px', flexShrink: 0 }} />
-                                        <p style={{ margin: 0, color: '#374151', fontWeight: 'bold' }}>Exclusividad y control total</p>
+                                        <Flame size={16} color="#FFC107" style={{ marginTop: '2px', flexShrink: 0 }} />
+                                        <p style={{ margin: 0, color: '#ffffff', fontWeight: 'bold' }}>Exclusividad y control total</p>
                                     </div>
                                 </div>
                             </div>
