@@ -588,7 +588,7 @@ export default function ServiciosSec() {
                         {/* Modal content */}
                         <div style={{ padding: '32px' }}>
                             <h2 style={{ color: '#020e28', marginBottom: '8px', fontSize: '24px', fontWeight: 'bold' }}>
-                                Embalaje y Volumetría
+                                Transporte Internacional
                             </h2>
                             <p style={{ color: '#6b7280', marginBottom: '24px', fontSize: '14px' }}>
                                 Hihub Global Tech Limited
