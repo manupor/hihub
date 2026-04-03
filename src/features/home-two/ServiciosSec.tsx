@@ -62,9 +62,8 @@ export default function ServiciosSec() {
                                         onClick={() => {
                                             if (service.titleKey === 'servicios.air') setShowModal(true);
                                             if (service.titleKey === 'servicios.planning') setShowSourcingModal(true);
-                                            if (service.titleKey === 'servicios.ground') setShowVolumetricsModal(true);
                                         }}
-                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning' || service.titleKey === 'servicios.ground') ? 'pointer' : 'default' }}
+                                        style={{ cursor: (service.titleKey === 'servicios.air' || service.titleKey === 'servicios.planning') ? 'pointer' : 'default' }}
                                     >
                                         <h3 className="display-6 fw-bold mb-0" style={{ color: '#000', fontSize: 'clamp(0.85rem, 3vw, 1.1rem)' }}>
                                             {t(service.titleKey)}
@@ -107,7 +106,13 @@ export default function ServiciosSec() {
                             const IconComponent = service.icon;
                             return (
                                 <FadeInAdvanced key={`right-${index}`} variant="fadeInUp" delay={index * 0.1}>
-                                    <div className="single-choose d-flex align-items-center mb-3">
+                                    <div 
+                                        className="single-choose d-flex align-items-center mb-3"
+                                        onClick={() => {
+                                            if (service.titleKey === 'servicios.consulting') setShowVolumetricsModal(true);
+                                        }}
+                                        style={{ cursor: service.titleKey === 'servicios.consulting' ? 'pointer' : 'default' }}
+                                    >
                                         <span 
                                             className="icon d-flex align-items-center justify-content-center"
                                             style={{ 
@@ -178,8 +183,7 @@ export default function ServiciosSec() {
                         <FadeInAdvanced variant="fadeInUp" delay={0.2}>
                             <div 
                                 className="single-choose d-flex align-items-center justify-content-between p-2" 
-                                onClick={() => setShowVolumetricsModal(true)}
-                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px', cursor: 'pointer' }}
+                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px' }}
                             >
                                 <h3 className="fw-bold mb-0 text-start" style={{ color: '#000', fontSize: '0.8rem', flexGrow: 1, marginRight: '8px' }}>
                                     {t('servicios.ground')}
@@ -195,7 +199,10 @@ export default function ServiciosSec() {
                     </div>
                     <div className="col-6">
                         <FadeInAdvanced variant="fadeInUp" delay={0.3}>
-                            <div className="single-choose d-flex align-items-center justify-content-between p-2" style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px' }}>
+                            <div 
+                                className="single-choose d-flex align-items-center justify-content-between p-2" 
+                                onClick={() => setShowVolumetricsModal(true)}
+                                style={{ backgroundColor: 'rgba(255,255,255,0.95)', borderRadius: '8px', minHeight: '60px', cursor: 'pointer' }}>
                                 <h3 className="fw-bold mb-0 text-start" style={{ color: '#000', fontSize: '0.8rem', flexGrow: 1, marginRight: '8px' }}>
                                     {t('servicios.consulting')}
                                 </h3>

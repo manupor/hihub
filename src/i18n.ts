@@ -204,7 +204,7 @@ const resources = {
       "servicios.maritime": "Maritime Freight",
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Packaging & Volumetrics",
-      "servicios.consulting": "Air Consulting",
+      "servicios.consulting": "International Transport",
       "servicios.packaging": "Packaging & Handling",
       "servicios.planning": "Sourcing/Manufacturing",
 
@@ -419,7 +419,7 @@ const resources = {
       "servicios.maritime": "Flete Marítimo",
       "servicios.air": "Incoterms Esenciales",
       "servicios.ground": "Embalaje y Volumetría",
-      "servicios.consulting": "Consultoría Aérea",
+      "servicios.consulting": "Transporte Internacional",
       "servicios.packaging": "Embalaje y Manejo",
       "servicios.planning": "Sourcing/Fabricación",
 
